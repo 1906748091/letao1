@@ -1,0 +1,122 @@
+/* 定义京东主体色变量 */
+@main-color:#006699;
+
+/* 清除浏览器的默认样式 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 设置盒模型包含边框 padding和 内容 */
+    box-sizing: border-box;
+    /* 清除移动端点击高亮的背景色 （按住才有用）*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+input {
+    border: 0;
+    outline: 0;
+}
+
+img {
+    /* 去除图片对齐3px的问题 */
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+
+/* 公共类名 */
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.bt{
+    border-top: 1px solid #ccc;
+}
+.br{
+    border-right: 1px solid #ccc;
+}
+.bb{
+    border-bottom: 1px solid #ccc;
+}
+.bl{
+    border-left: 1px solid #ccc;
+}
+// 公共头部区域样式
+#header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: @main-color;
+    height: 45px;
+    z-index: 999;
+    >h4{
+        color: #fff;
+        text-align: center;
+        line-height: 35px;
+    }
+    .icon-search{
+        color: #fff;
+        position: absolute;
+        right: 10px;
+        font-size: 20px;
+        top: 13px; 
+    }
+}
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: @main-color;
+    height: 45px;
+    padding: 5px;
+    z-index: 999;
+    .mui-row{
+        >div{
+            text-align: center;
+            >a{
+                display: block;
+                color: #fff;
+                >i{
+                    display: block;
+                }
+            }
+            &.active{
+                >a{
+                    color: yellowgreen;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import  'base.less';
+html,body{
+    height: 100%;
+}
+#wrapper{
+    height: 100%;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    .list{
+        background-color: #fff;
+    }
+   #nav{
+       padding: 10px;
+        .mui-row{
+            a{
+                // display: block;
+                >img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+   }
+   #banner{
+       padding: 0 10px;
+       .mui-row{
+           >div{
+               .mui-row{
+                    >a{
+                        >div{
+                            float: left;
+                        }
+                    }
+               }
+               a{
+                   img{
+                       width: 100%;
+                   }
+               }
+           }
+       }
+   }
+   #products{
+       padding: 0 10px;
+       .brand-area{
+           a{
+               img{
+                   width: 100%;
+                   display: block;
+               }
+           }
+        //    >div{
+        //        >div{
+        //            >a{
+        //                >img{
+
+        //                }
+        //            }
+        //        }
+        //    }
+       }
+       .sport-area,.women-area,.man-area{
+           >.mui-row{
+               >div{
+                   padding: 0 5px;
+                   margin-top: 10px;
+                   .product{
+                    box-shadow: 0px 0px 5px #ccc;
+                    padding-bottom: 10px;
+                    .product-price{
+                        margin-bottom: 10px;
+                        text-align: center;
+                        >span{
+                            margin-right: 10px;
+                            color: red;
+                        }
+                    }
+                    .product-name{
+                        margin-bottom: 10px;
+                        height: 40px;
+                        overflow: hidden;
+                        text-align: center;
+                    }
+                    .product-buy{
+                     //  position: absolute;
+                     //  left: 50%;
+                     //  transform: translateX(-50%);
+                     text-align: center;
+                    }
+                   }
+               }
+           }
+           a{
+               >img{
+                   display: block;
+                   width: 100%;
+               }
+           }
+       }
+   }
+   
+}
