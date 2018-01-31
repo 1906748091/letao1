@@ -15,40 +15,81 @@
 
 <body>
     <header id="header">
-        <h4>我的乐淘首页</h4>
+        <a href="#" class="fa fa-arrow-left"></a>
+        <form action="#">
+            <input type="search" placeholder="请输入要搜索的商品">
+        </form>
         <a href="#" class="icon-search"><i class="fa fa-search"></i></a>
     </header>
+    <main id="category">
+        <div class="category-left">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="category-right">
+            <div class="mui-scroll-wrapper">
+                <div class="category-list mui-scroll">
+
+                </div>
+            </div>
+        </div>
+    </main>
     <footer id="footer">
         <div class="mui-row">
             <div class="mui-col-xs-3 active">
-                <a herf="index.html">
+                <a href="index.html">
                     <i class="fa fa-home"></i>
                     <span>首页</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a herf="category.html">
+                <a href="category.html">
                     <i class="fa fa-bars"></i>
                     <span>分类</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a herf="cart.html">
+                <a href="cart.html">
                     <i class="fa fa-shopping-cart"></i>
                     <span>购物车</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a herf="user.html">
+                <a href="user.html">
                     <i class="fa fa-user"></i>
                     <span>会员中心</span>
                 </a>
             </div>
         </div>
     </footer>
+    <script type="text/html" id="categoryLeftTmp">
+        {{each rows as value i}}
+        <li>
+            <a href="#" data-id="{{value.id}}">
+                    {{value.categoryName}}
+                </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="categoryRightTmp">
+        <div class="mui-row">
+            {{if rows.length}} {{each rows as value i}}
+            <div class="mui-col-xs-4">
+                <a href="#">
+                    <img src="{{value.brandLogo}}" alt="">
+                    <p>{{value.brandName}}</p>
+                </a>
+            </div>
+            {{/each}} {{else}}
+            <p>没有数据</p>
+            {{/if}}
+        </div>
+    </script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/artTemplate/template.js"></script>
-    <script src=""></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/category.js"></script>
 </body>
 
 </html>
