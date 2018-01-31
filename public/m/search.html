@@ -9,29 +9,29 @@
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
-    <link rel="stylesheet/less" href="./less/category.less">
+    <link rel="stylesheet/less" href="./less/search.less">
     <script src="./lib/less/less.js"></script>
 </head>
 
 <body>
     <header id="header">
         <a href="#" class="fa fa-arrow-left"></a>
-        <form action="#">
-            <input type="search" placeholder="请输入要搜索的商品">
-        </form>
-        <a href="search.html" class="icon-search"><i class="fa fa-search"></i></a>
+        <h4>搜索中心</h4>
     </header>
-    <main id="category">
-        <div class="category-left">
-            <ul>
+    <main id="search">
+        <form action="#" class="search-form">
+            <div class="search-input">
+                <input type="search" placeholder="请输入要搜索的商品">
+            </div>
+            <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+        </form>
+        <div class="search-history">
+            <div class="search-history-title clearfix">
+                <span class="mui-pull-left">搜索历史</span>
+                <span class="mui-pull-right fa fa-trash clear-history">清空记录</span>
+            </div>
+            <div class="search-history-body">
 
-            </ul>
-        </div>
-        <div class="category-right">
-            <div class="mui-scroll-wrapper">
-                <div class="category-list mui-scroll">
-
-                </div>
             </div>
         </div>
     </main>
@@ -63,33 +63,21 @@
             </div>
         </div>
     </footer>
-    <script type="text/html" id="categoryLeftTmp">
-        {{each rows as value i}}
-        <li>
-            <a href="#" data-id="{{value.id}}">
-                    {{value.categoryName}}
-                </a>
-        </li>
-        {{/each}}
-    </script>
-    <script type="text/html" id="categoryRightTmp">
-        <div class="mui-row">
-            {{if rows.length}} {{each rows as value i}}
-            <div class="mui-col-xs-4">
-                <a href="#">
-                    <img src="{{value.brandLogo}}" alt="">
-                    <p>{{value.brandName}}</p>
-                </a>
-            </div>
-            {{/each}} {{else}}
-            <p>没有数据</p>
-            {{/if}}
-        </div>
+    <script type="text/html" id="historyListTmp">
+        <ul class="mui-table-view">
+            {{each rows as value i}}
+            <li class="mui-table-view-cell">
+                <a href="#" data-id="{{value.id}}">
+                    {{value.search}} <i class="fa fa-close"></i>
+                    </a>
+            </li>
+            {{/each}}
+        </ul>
     </script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/artTemplate/template.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>
-    <script src="./js/category.js"></script>
+    <script src="./js/search.js"></script>
 </body>
 
 </html>
