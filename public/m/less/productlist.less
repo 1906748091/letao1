@@ -1,0 +1,81 @@
+@import 'base.less';
+#search{
+    background-color: #fff;
+    height: 100%;
+    .mui-scroll-wrapper{
+        position: relative;
+        height: 100%;
+    }
+    .search-form{
+        position: relative;
+        padding: 10px;
+        .search-input{
+            margin-right: 54px;
+            >input{
+                background-color: #fff;
+                text-align: left;
+                font-size: 12px;
+                border: 1px solid @main-color;
+                border-radius: 5px 0 0 5px;
+                margin-bottom: 0;
+            }
+        }
+        >button{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: @main-color;
+            border-radius: 0px 5px 5px 0px;
+            height: 34px;
+            border-color: @main-color;
+        }
+    }
+    .product-list-title{
+        .mui-row{
+            text-align: center;
+            background-color: #ccc;
+            >div{
+                >a{
+                    font-size: 12px;
+                }
+                >i{
+                }
+            }
+        }
+    }
+    .producst-list-body{
+        .mui-row{
+            >div{
+                padding: 0 5px;
+                margin-top: 10px;
+                .product{
+                 box-shadow: 0px 0px 5px #ccc;
+                 padding-bottom: 10px;
+                 .product-price{
+                     margin-bottom: 10px;
+                     text-align: center;
+                     >span{
+                         margin-right: 10px;
+                         color: red;
+                     }
+                 }
+                 .product-name{
+                     margin-bottom: 10px;
+                     height: 40px;
+                     overflow: hidden;
+                     text-align: center;
+                 }
+                 .product-buy{
+                  text-align: center;
+                 }
+                }
+            }
+        }
+        a{
+            >img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
