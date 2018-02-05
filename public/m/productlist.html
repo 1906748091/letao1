@@ -15,7 +15,7 @@
 
 <body>
     <header id="header">
-        <a href="#" class="fa fa-arrow-left"></a>
+        <a href="javascript:history.go(-1)" class="fa fa-arrow-left"></a>
         <h4>搜索中心</h4>
     </header>
     <main id="search">
@@ -30,19 +30,19 @@
                 <div class="product-list-title">
                     <div class="mui-row">
                         <div class="mui-col-xs-3">
-                            <a href="#">上架时间</a>
+                            <a href="#" data-rotate='1'>上架时间</a>
                             <i class="fa fa-angle-down"></i>
                         </div>
                         <div class="mui-col-xs-3">
-                            <a href="#">价格</a>
+                            <a href="#" data-rotate='1' data-sort-type='price'>价格</a>
                             <i class="fa fa-angle-down"></i>
                         </div>
                         <div class="mui-col-xs-3">
-                            <a href="#">销量</a>
+                            <a href="#" data-rotate='1' data-sort-type='num'>销量</a>
                             <i class="fa fa-angle-down"></i>
                         </div>
                         <div class="mui-col-xs-3">
-                            <a href="#">折扣</a>
+                            <a href="#" data-rotate='1'>折扣</a>
                             <i class="fa fa-angle-down"></i>
                         </div>
                     </div>
@@ -89,8 +89,8 @@
             <div class="product">
                 <a href="#" class="product-img"><img src="{{value.pic[0].picAddr}}" alt=""></a>
                 <div class="product-name">{{value.proName}}</div>
-                <div class="product-price"><span class="now-price">{{value.price}}</span><del class="old-price">{{value.oldPrice}}</del></div>
-                <div class="product-buy"><button type="button" class="mui-btn mui-btn-primary">立即购买</button></div>
+                <div class="product-price"><span class="now-price">${{value.price}}</span><del class="old-price">${{value.oldPrice}}</del></div>
+                <div class="product-buy"><button type="button" data-id="{{value.id}}" class="mui-btn mui-btn-primary btn-buy">立即购买</button></div>
             </div>
         </div>
         {{/each}}

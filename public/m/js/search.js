@@ -29,6 +29,7 @@ Letao.prototype = {
                 localStorage.setItem('historyData', JSON.stringify(historyData))
                 that.queryHistory();
             }
+            window.location = 'productlist.html?search=' + search;
         })
 
     },
